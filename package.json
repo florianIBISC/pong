@@ -1,19 +1,11 @@
 {
-  "name": "pong",
+  "name": "pong-game",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "jeu pong multiplayer",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/florianIBISC/pong.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/florianIBISC/pong/issues"
-  },
-  "homepage": "https://github.com/florianIBISC/pong#readme"
+  "author": "Firenze",
+  "license": "ISC"
 }
