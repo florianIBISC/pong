@@ -8,6 +8,39 @@ app.use('/public', express.static('public'));
 app.get('/', function(req, res,next) {
     res.sendFile(__dirname + '/index.html');
 });
+/*
+io.on('connection', function(client) {
+    console.log('Client connected...');
+
+    client.on('join', function(data) {
+        console.log(data);
+    });
+});*/
+/*
+io.on('connection', function(client) {  
+    console.log('Client connected...');
+
+    client.on('join', function(data) {
+        console.log(data);
+        client.emit('messages', 'Hello from server');
+    });
+});*/
+
+io.on('connection', function(client) {
+    console.log('Client connected...');
+
+    client.on('join', function(data) {
+        console.log(data);
+    });
+
+    client.on('messages', function(data) {
+           client.emit('broad', data);
+           client.broadcast.emit('broad',data);
+    });
+
+});
+
+
 
 server.listen(4200);
 module.exports = app;
